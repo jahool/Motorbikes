@@ -7,14 +7,17 @@ class Bike{
 		double weight;
 		
 
-		Bike(String bikeBrand, String bikeModel, int bikeYearOfProduction, double bikeEngineCapacity, int bikeMaxPower,
-				double bikeWeight) {
-			brand = bikeBrand;
-			model = bikeModel;
-			yearOfProduction = bikeYearOfProduction;
-			engineCapacity = bikeEngineCapacity;
-			maxPower = bikeMaxPower;
-			weight = bikeWeight;
+		Bike(String brand, String model, int yearOfProduction, double engineCapacity, int maxPower,
+				double weight) {
+			this.brand = brand;
+			this.model = model;
+			this.yearOfProduction = yearOfProduction;
+			this.engineCapacity = engineCapacity;
+			this.maxPower = maxPower;
+			this.weight = weight;
+		}
+		Bike (Bike bike){
+			this(bike.brand, bike.model, bike.yearOfProduction, bike.engineCapacity, bike.maxPower, bike.weight);
 		}
 
 		void printInfo() {
